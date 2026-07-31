@@ -4,7 +4,8 @@ use task3;
 
 
 create table if not exists user(
-    Receiving_date int(11) primary key auto_increment,
+    id int(11) primary key auto_increment,
+    Receiving_date date,
     Tracking_number varchar(255),
     product_name varchar(255),
     CBM varchar(10),
@@ -39,7 +40,7 @@ SELECT * FROM user ORDER BY weight ASC;
 SELECT * FROM user ORDER BY CBM DESC;
 
 
-ALTER TABLE user ADD COLUMN remark VARCHAR(500) COMMENT '备注';
+ALTER TABLE user ADD COLUMN remark VARCHAR(500);
 
 
 -- ALTER TABLE user DROP COLUMN remark;
